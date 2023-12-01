@@ -227,13 +227,16 @@ namespace System.Application.Services.Implementation
 
             //if (item != null)
             //{
+
+            //e.HttpClient.Request.Headers.AddHeader("User-Agent", "Steam++ Proxy/" + ThisAssembly.Version);
+
             foreach (var item in ProxyDomains)
             {
                 foreach (var host in item.DomainNamesArray)
                 {
-                    if (e.HttpClient.Request.RequestUri.AbsoluteUri.Contains(host, StringComparison.OrdinalIgnoreCase))
+                    if (e.HttpClient.Request.RequestUri.AbsoluteUri.IsDomainPattern(host, RegexOptions.IgnoreCase))
                     {
-                        if (e.HttpClient.Request.RequestUri.Scheme.Equals("http", StringComparison.OrdinalIgnoreCase))
+                        if (!e.HttpClient.IsHttps)
                         {
                             e.HttpClient.Request.RequestUri = new Uri(e.HttpClient.Request.RequestUri.AbsoluteUri.Remove(0, 4).Insert(0, "https"));
                             //e.Redirect(e.HttpClient.Request.RequestUri.AbsoluteUri.Remove(0, 4).Insert(0, "https"));
@@ -263,6 +266,14 @@ namespace System.Application.Services.Implementation
                             if (ip == null || IPAddress.IsLoopback(ip) || ip.Equals(IPAddress.Any))
                                 goto exit;
                             e.HttpClient.UpStreamEndPoint = new IPEndPoint(ip, item.PortId);
+                        }
+
+                        if (!string.IsNullOrEmpty(item.UserAgent))
+                        {
+                            var oldua = e.HttpClient.Request.Headers.GetFirstHeader("User-Agent")?.Value;
+                            e.HttpClient.Request.Headers.RemoveHeader("User-Agent");
+                            var newUA = item.UserAgent.Replace("${origin}", oldua);
+                            e.HttpClient.Request.Headers.AddHeader("User-Agent", newUA);
                         }
 
                         if (e.HttpClient.ConnectRequest?.ClientHelloInfo?.Extensions != null)
@@ -337,7 +348,7 @@ namespace System.Application.Services.Implementation
                     if (script.ExcludeDomainNamesArray != null)
                         foreach (var host in script.ExcludeDomainNamesArray)
                         {
-                            if (e.HttpClient.Request.RequestUri.AbsoluteUri.IsWildcard(host))
+                            if (e.HttpClient.Request.RequestUri.AbsoluteUri.IsWildcard(host, RegexOptions.IgnoreCase))
                                 goto next;
                         }
 
@@ -345,9 +356,9 @@ namespace System.Application.Services.Implementation
                     {
                         var state = host.IndexOf("/") == 0;
                         if (state)
-                            state = Regex.IsMatch(e.HttpClient.Request.RequestUri.AbsoluteUri, host[1..], RegexOptions.Compiled);
+                            state = Regex.IsMatch(e.HttpClient.Request.RequestUri.AbsoluteUri, host[1..], RegexOptions.IgnoreCase);
                         else
-                            state = e.HttpClient.Request.RequestUri.AbsoluteUri.IsWildcard(host);
+                            state = e.HttpClient.Request.RequestUri.AbsoluteUri.IsWildcard(host, RegexOptions.IgnoreCase);
                         if (state)
                         {
                             var t = e.HttpClient.Response.Headers.GetFirstHeader("Content-Security-Policy");
@@ -397,10 +408,41 @@ namespace System.Application.Services.Implementation
             return Task.CompletedTask;
         }
 
+        string? IHttpProxyService.GetCerFilePathGeneratedWhenNoFileExists() => GetCerFilePathGeneratedWhenNoFileExists();
+
+        /// <inheritdoc cref="IHttpProxyService.GetCerFilePathGeneratedWhenNoFileExists"/>
+        public string? GetCerFilePathGeneratedWhenNoFileExists(string? filePath = null)
+        {
+            filePath ??= ((IHttpProxyService)this).CerFilePath;
+            if (!File.Exists(filePath))
+            {
+                if (!GenerateCertificate(filePath)) return null;
+            }
+            return filePath;
+        }
+
+        public bool GenerateCertificate(string? filePath = null)
+        {
+            var result = proxyServer.CertificateManager.CreateRootCertificate(true);
+            if (!result || proxyServer.CertificateManager.RootCertificate == null)
+            {
+                Log.Error(TAG, AppResources.CreateCertificateFaild);
+                Toast.Show(AppResources.CreateCertificateFaild);
+                return false;
+            }
+
+            filePath ??= ((IHttpProxyService)this).CerFilePath;
+
+            proxyServer.CertificateManager.RootCertificate.SaveCerCertificateFile(filePath);
+
+            return true;
+        }
+
         public void TrustCer()
         {
-            var filePath = ((IHttpProxyService)this).CerFilePath;
-            IPlatformService.Instance.RunShell($"security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain \"{filePath}\"", true);
+            var filePath = GetCerFilePathGeneratedWhenNoFileExists();
+            if (filePath != null)
+                IPlatformService.Instance.RunShell($"security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain \"{filePath}\"", true);
         }
 
         public bool SetupCertificate()
@@ -410,17 +452,9 @@ namespace System.Application.Services.Implementation
             //proxyServer.CertificateManager
             //    .CreateServerCertificate($"{Assembly.GetCallingAssembly().GetName().Name} Certificate")
             //    .ContinueWith(c => proxyServer.CertificateManager.RootCertificate = c.Result);
-            var result = proxyServer.CertificateManager.CreateRootCertificate(true);
-            if (!result || proxyServer.CertificateManager.RootCertificate == null)
-            {
-                Log.Error(TAG, AppResources.CreateCertificateFaild);
-                Toast.Show(AppResources.CreateCertificateFaild);
-                return false;
-            }
 
-            var filePath = ((IHttpProxyService)this).CerFilePath;
+            if (!GenerateCertificate()) return false;
 
-            proxyServer.CertificateManager.RootCertificate.SaveCerCertificateFile(filePath);
             try
             {
                 proxyServer.CertificateManager.TrustRootCertificate();

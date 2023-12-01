@@ -1,4 +1,5 @@
 #if __ANDROID__
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Webkit;
@@ -147,7 +148,23 @@ namespace System.Application.UI
                 b.AppendLine();
 
                 b.Append("[app.install] ");
-                b.Append(platformService.IsInstall);
+                b.Append(platformService.IsInstall.ToLowerString());
+                b.AppendLine();
+
+
+                b.Append("[memory.usage] ");
+#if __ANDROID__
+                var activityManager = activity.GetActivityManager();
+                ActivityManager.MemoryInfo memoryInfo = new();
+                activityManager.GetMemoryInfo(memoryInfo);
+                var nativeHeapSize = memoryInfo.TotalMem;
+                var nativeHeapFreeSize = memoryInfo.AvailMem;
+                var usedMemInBytes = nativeHeapSize - nativeHeapFreeSize;
+                var usedMemInPercentage = usedMemInBytes * 100M / nativeHeapSize;
+                b.Append($"{IOPath.GetSizeString(usedMemInBytes)} ({usedMemInPercentage:0.00}%)");
+#else
+                b.Append(IOPath.GetSizeString(Environment.WorkingSet));
+#endif
                 b.AppendLine();
 
                 b.Append("[deploy.mode] ");

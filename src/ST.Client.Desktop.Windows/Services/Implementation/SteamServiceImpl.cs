@@ -165,7 +165,7 @@ namespace System.Application.Services.Implementation
                         try
                         {
                             var i = item.Value;
-                            var user = new SteamUser(item.ToString())
+                            var user = new SteamUser()
                             {
                                 SteamId64 = Convert.ToInt64(item.Key.ToString()),
                                 AccountName = i.AccountName?.ToString(),
@@ -216,28 +216,18 @@ namespace System.Application.Services.Implementation
                     var authorizedDevice = v.Value.AuthorizedDevice;
                     if (authorizedDevice != null)
                     {
-                        foreach (var item in authorizedDevice)
+                        var lists = new VObject();
+                        foreach (var item in model.OrderBy(x => x.Index))
                         {
-                            try
-                            {
-                                var i = item.Value;
-                                authorizeds.Add(new AuthorizedDevice(item.ToString())
-                                {
-                                    SteamId3_Int = Convert.ToInt64(item.Key.ToString()),
-                                    Timeused = Convert.ToInt64(i.timeused.ToString()),
-                                    Description = i.description.ToString(),
-                                    Tokenid = i.tokenid.ToString(),
-                                });
-                            }
-                            catch (Exception e)
-                            {
-                                Log.Error(TAG, e, "GetAuthorizedDeviceList Fail(0).");
-                            }
+                            VObject itemTemp = new VObject();
+                            itemTemp.Add("timeused", new VValue(item.Timeused));
+                            itemTemp.Add("description", new VValue(item.Description));
+                            itemTemp.Add("tokenid", new VValue(item.Tokenid));
+
+                            lists.Add(item.SteamId3_Int.ToString(), itemTemp);
                         }
-                        var oldStr = $"\t{{\n{string.Join("\n", authorizeds.Select(x => x.CurrentVdfString))}\n\t}}".TrimEnd("\n");
-                        //authorizedDevice.Select(x => x.ToString());
-                        var newStr = $"\t{{\n{string.Join("\n", model.OrderBy(x => x.Index).Select(x => x.CurrentVdfString))}\n\t}}".TrimEnd("\n");
-                        VdfHelper.UpdateValueByReplaceNoPattern(ConfigVdfPath, oldStr, newStr);
+                        v.Value.AuthorizedDevice = lists;
+                        VdfHelper.Write(ConfigVdfPath, v);
                         return true;
                     }
                     else
@@ -259,7 +249,13 @@ namespace System.Application.Services.Implementation
             {
                 if (!string.IsNullOrWhiteSpace(ConfigVdfPath) && File.Exists(ConfigVdfPath))
                 {
-                    VdfHelper.DeleteValueByKey(ConfigVdfPath, model.OriginVdfString.ThrowIsNull(nameof(model.OriginVdfString)));
+                    dynamic v = VdfHelper.Read(ConfigVdfPath);
+                    var authorizedDevice = v.Value.AuthorizedDevice;
+                    if (authorizedDevice != null)
+                    {
+                        authorizedDevice = ((IEnumerable<VProperty>)authorizedDevice).Where(x => x.Key != model.SteamId3_Int.ToString());
+                        VdfHelper.Write(ConfigVdfPath, v);
+                    }
                     return true;
                 }
             }
@@ -376,19 +372,43 @@ namespace System.Application.Services.Implementation
             }
             else
             {
-                VdfHelper.DeleteValueByKey(UserVdfPath, user.SteamId64.ToString());
-                if (IsDeleteUserData)
+                dynamic v = VdfHelper.Read(UserVdfPath);
+                dynamic users = v.Value.Children();
+                if (users != null)
                 {
-                    var temp = Path.Combine(SteamDirPath, UserDataDirectory, user.SteamId3_Int.ToString());
-                    if (Directory.Exists(temp))
+                    try
                     {
-                        Directory.Delete(temp, true);
+                        for (int i = 0; i < users.Count; i++)
+                        {
+                            var item = users[i];
+                            if (item != null&& item!.Key== user.SteamId64.ToString())
+                            {
+                                users.Remove(users[i]);
+                                VdfHelper.Write(UserVdfPath, v);
+                                //VdfHelper.DeleteValueByKey(UserVdfPath, user.SteamId64.ToString());
+                                if (IsDeleteUserData)
+                                {
+                                    var temp = Path.Combine(SteamDirPath, UserDataDirectory, user.SteamId3_Int.ToString());
+                                    if (Directory.Exists(temp))
+                                    {
+                                        Directory.Delete(temp, true);
+                                    }
+                                }
+                                return;
+                            }
+                        }
+                       
+                       
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Error(TAG, e, "GetUserVdfPath for Delete catch");
                     }
                 }
             }
         }
 
-        public void UpdateLocalUserData(SteamUser user)
+        public void UpdateLocalUserData(IEnumerable<SteamUser> user)
         {
             if (string.IsNullOrWhiteSpace(UserVdfPath))
             {
@@ -396,11 +416,32 @@ namespace System.Application.Services.Implementation
             }
             else
             {
-                var originVdfStr = user.OriginVdfString;
-                VdfHelper.UpdateValueByReplace(
-                    UserVdfPath,
-                    originVdfStr.ThrowIsNull(nameof(originVdfStr)),
-                    user.CurrentVdfString);
+                if (File.Exists(UserVdfPath))
+                {
+                    dynamic models = VdfHelper.Read(UserVdfPath);
+                    foreach (var item in models.Value.Children())
+                    {
+                        try
+                        {
+                            var itemUser = user.FirstOrDefault(x => x.SteamId64.ToString() == item.Key);
+                            if (itemUser == null)
+                            {
+                                item.Value.MostRecent = item.Value.MostRecent == 1 ? 0 : 1;
+                                break;
+                            }
+                            item.Value.MostRecent = Convert.ToByte(itemUser.MostRecent);
+                            item.Value.Timestamp = itemUser.Timestamp;
+                            item.Value.WantsOfflineMode = Convert.ToByte(itemUser.WantsOfflineMode);
+                            item.Value.SkipOfflineModeWarning = Convert.ToByte(itemUser.SkipOfflineModeWarning);
+                        }
+                        catch (Exception e)
+                        {
+                            Log.Error(TAG, e, "GetUserVdfPath for catch");
+                        }
+                    }
+
+                    VdfHelper.Write(UserVdfPath, models);
+                }
             }
         }
 
@@ -863,6 +904,7 @@ namespace System.Application.Services.Implementation
             }
             return keys;
         }
+
     }
 }
 

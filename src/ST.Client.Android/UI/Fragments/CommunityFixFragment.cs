@@ -18,6 +18,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using static System.Application.UI.ViewModels.CommunityProxyPageViewModel;
+using System.Application.Services.Implementation;
 
 namespace System.Application.UI.Fragments
 {
@@ -59,7 +60,7 @@ namespace System.Application.UI.Fragments
                 binding.layoutRootCommunityFixContentStarting.Visibility = value ? ViewStates.Visible : ViewStates.Gone;
                 if (value)
                 {
-                    binding.tvProxyMode.Text = proxyS.IPEndPointString;
+                    binding.tvProxyMode.Text = $"IPEndPoint: {proxyS.ProxyIp}:{proxyS.ProxyPort}";
                     StringBuilder s = new();
                     var enableProxyDomains = proxyS.GetEnableProxyDomains();
                     if (enableProxyDomains != null)
@@ -144,30 +145,15 @@ namespace System.Application.UI.Fragments
             }
         }
 
-        public static void ShowTipKnownIssues()
-        {
-            MessageBox.Show(string.Join(Environment.NewLine, new[] {
-                "VPN 模式不能正常工作",
-                "需要在 Wifi 或 流量 上手动设置代理地址，关闭时手动清除设置",
-                "Android 7+ 不信任用户证书",
-            }), "已知问题");
-        }
-
         void StartProxyButton_Click(bool start)
-            => ProxyForegroundService.StartOrStop(RequireActivity(), start);
+            => AndroidPlatformServiceImpl.StartOrStopForegroundService(
+                RequireActivity(), nameof(ProxyService), start);
 
         protected override bool OnClick(View view)
         {
             if (view.Id == Resource.Id.btnStartProxyService)
             {
                 StartProxyButton_Click(true);
-                const string KEY = "CommunityFixFragment_IsShowTip";
-                var isShowTip = Preferences2.Get(KEY, false);
-                if (!isShowTip)
-                {
-                    ShowTipKnownIssues();
-                    Preferences2.Set(KEY, true);
-                }
                 return true;
             }
             else if (view.Id == Resource.Id.btnStopProxyService)
@@ -257,11 +243,7 @@ namespace System.Application.UI.Fragments
 
         void InstallCertificate() => ViewModel!.ExportCertificateFile(cefFilePath =>
         {
-            var dest = Path.Combine(IOPath.CacheDirectory, IHttpProxyService.CerFileName);
-            File.Copy(cefFilePath, dest, true);
-            // AppData 目录仅本 App 读写，Cache 目录可给予其他 App 读取权限
-            GoToPlatformPages.OpenFile(RequireContext(),
-                new(dest), MediaTypeNames.CER);
+            GoToPlatformPages.InstallCertificate(RequireContext(), cefFilePath, IHttpProxyService.RootCertificateName);
         });
 
 #if DEBUG
@@ -271,7 +253,9 @@ namespace System.Application.UI.Fragments
             var s = IHttpProxyService.Instance;
             Xamarin.Android.Net.AndroidClientHandler handler = new();
             handler.Proxy = new WebProxy(s.ProxyIp.ToString(), s.ProxyPort);
-            handler.AddTrustedCert(File.OpenRead(s.CerFilePath));
+            var certFilePath = s.GetCerFilePathGeneratedWhenNoFileExists();
+            if (certFilePath != null)
+                handler.AddTrustedCert(File.OpenRead(certFilePath));
             using var client = new HttpClient(handler);
             using var rsp = await client.SendAsync(new HttpRequestMessage(HttpMethod.Get,
                 "https://steamcommunity.com"));

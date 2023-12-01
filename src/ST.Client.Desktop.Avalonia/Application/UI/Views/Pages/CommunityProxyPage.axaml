@@ -65,6 +65,15 @@
             </ui:CommandBarElementContainer>
 
             <ui:CommandBarSeparator/>
+            <!--<ui:CommandBarElementContainer Margin="8 0"
+                                           HorizontalContentAlignment="Center">
+              <ComboBox VerticalAlignment="Center">
+                <ComboBoxItem Content="{ReflectionBinding Path=Res.CommunityFix_ProxyMode_Hosts,Mode=OneWay,Source={x:Static resx:R.Current}}">
+                </ComboBoxItem>
+                <ComboBoxItem Content="{ReflectionBinding Path=Res.CommunityFix_ProxyMode_WinSystem,Mode=OneWay,Source={x:Static resx:R.Current}}">
+                </ComboBoxItem>
+              </ComboBox>
+            </ui:CommandBarElementContainer>-->
             <ui:CommandBarElementContainer Margin="8 0"
                                            HorizontalContentAlignment="Center">
               <RadioButton Content="{ReflectionBinding Path=Res.CommunityFix_ProxyMode_Hosts,Mode=OneWay,Source={x:Static resx:R.Current}}" ToolTip.Tip="{ReflectionBinding Path=Res.CommunityFix_ProxyMode_HostsTip,Mode=OneWay,Source={x:Static resx:R.Current}}" IsChecked="{Binding Source={x:Static ms:ProxySettings.EnableWindowsProxy},Path=!Value, Mode=TwoWay}"></RadioButton>
@@ -131,7 +140,7 @@
               </ui:CommandBarButton.Icon>
             </ui:CommandBarButton>
             <ui:CommandBarSeparator/>
-            
+
             <ui:CommandBarButton
          Command="{Binding EditHostsFileCommand}"
          Label="{ReflectionBinding Path=Res.CommunityFix_EditHostsFile,Mode=OneWay,Source={x:Static resx:R.Current}}">
@@ -139,13 +148,7 @@
                 <ui:PathIcon Data="{StaticResource DocumentEditDrawing}"/>
               </ui:CommandBarButton.Icon>
             </ui:CommandBarButton>
-            <ui:CommandBarButton
-         Command="{Binding OpenHostsDirCommand}"
-         Label="{ReflectionBinding Path=Res.CommunityFix_OpenHostsDir,Mode=OneWay,Source={x:Static resx:R.Current}}">
-              <ui:CommandBarButton.Icon>
-                <ui:PathIcon Data="{StaticResource FolderOpenDrawing}"/>
-              </ui:CommandBarButton.Icon>
-            </ui:CommandBarButton>
+            
             <ui:CommandBarButton
          Command="{Binding ResetHostsFileCommand}"
          Label="{ReflectionBinding Path=Res.CommunityFix_ResetHostsFile,Mode=OneWay,Source={x:Static resx:R.Current}}">
@@ -153,7 +156,15 @@
                 <ui:PathIcon Data="{StaticResource DocumentEditDrawing}"/>
               </ui:CommandBarButton.Icon>
             </ui:CommandBarButton>
-          
+            
+            <ui:CommandBarButton
+         Command="{Binding OpenHostsDirCommand}"
+         Label="{ReflectionBinding Path=Res.CommunityFix_OpenHostsDir,Mode=OneWay,Source={x:Static resx:R.Current}}">
+              <ui:CommandBarButton.Icon>
+                <ui:PathIcon Data="{StaticResource FolderOpenDrawing}"/>
+              </ui:CommandBarButton.Icon>
+            </ui:CommandBarButton>
+
           </ui:CommandBar.SecondaryCommands>
         </ui:CommandBar>
       </Border>
@@ -170,13 +181,11 @@
                  ClipToBounds="True"
                  Items="{ReflectionBinding Source={x:Static service:ProxyService.Current},Path=ProxyDomainsList,Mode=OneWay}"
                  SelectedItem="{ReflectionBinding Source={x:Static service:ProxyService.Current},Path=SelectGroup,Mode=TwoWay}"
-                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 VirtualizationMode="None"
                  AutoScrollToSelectedItem="True"
                  Background="Transparent">
           <ListBox.ItemTemplate>
             <DataTemplate>
-              <!--<Border Classes="paper" Background="{DynamicResource ThemeBrushKey}">-->
-              <!--<StackPanel>-->
               <StackPanel Orientation="Horizontal"
                          Margin="20 15">
                 <CheckBox Classes="onlyCheckBox"
@@ -194,9 +203,6 @@
                                              Margin="20 0 0 0">
                 </controls:ScrollingTextBlock>
               </StackPanel>
-              <!--<Separator Classes="Separator"  />-->
-              <!--</StackPanel>-->
-              <!--</Border>-->
             </DataTemplate>
           </ListBox.ItemTemplate>
         </ListBox>
