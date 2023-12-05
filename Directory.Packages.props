@@ -37,10 +37,10 @@
 	</ItemGroup>
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) Or $(TargetFramework.StartsWith('netcoreapp3.1'))">
 		<!-- Microsoft.Extensions.* & AspNetCore & EntityFrameworkCore(NETCOREAPP31) -->
-		<PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="3.1.22" />
-		<PackageVersion Include="Microsoft.Extensions.Http" Version="3.1.22" />
-		<PackageVersion Include="Microsoft.Extensions.Logging" Version="3.1.22" />
-		<PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.22" />
+		<PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
 		<PackageVersion Include="Microsoft.Extensions.Logging.AzureAppServices" Version="3.1.22" />
 		<PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.22" />
 		<PackageVersion Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
