@@ -205,7 +205,7 @@
 
 		<!-- Serialize -->
 		<PackageVersion Include="MessagePack" Version="2.3.85" />
-		<PackageVersion Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
 
 		<!-- Html Parser -->
 		<PackageVersion Include="HtmlAgilityPack" Version="1.11.42" />
