@@ -232,7 +232,7 @@
 		<PackageVersion Include="Portable.BouncyCastle" Version="1.9.0" />
 
 		<!-- Resilience & Transient Fault Handling -->
-		<PackageVersion Include="Polly" Version="7.2.3" />
+		<PackageVersion Include="Polly" Version="8.2.1" />
 
 		<!--Avalonia Start-->
 		<PackageVersion Include="Avalonia" Version="11.0.7" />
