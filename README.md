@@ -21,7 +21,7 @@
 [![Official WebSite](https://img.shields.io/badge/website@official-Ant%20Design%20of%20React-blue.svg?style=flat-square&color=61dafb)](https://github.com/ant-design/ant-design)
 [![BackManage WebSite](https://img.shields.io/badge/website@back_manage-Ant%20Design%20of%20Blazor-purple.svg?style=flat-square&color=512bd4)](https://github.com/ant-design-blazor/ant-design-blazor)
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FSteamTools-Team%2FSteamTools%2Fbadge%3Fref%3Ddevelop&style=flat-square)](https://actions-badge.atrox.dev/BeyondDimension/SteamTools/goto?ref=develop)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FSteamTools-Team%2FSteamTools%2Fbadge%3Fref%3Dmain&style=flat-square)](https://actions-badge.atrox.dev/BeyondDimension/SteamTools/goto?ref=main)
 [![GitHub Star](https://img.shields.io/github/stars/BeyondDimension/SteamTools.svg?style=social)](https://github.com/BeyondDimension/SteamTools)
 [![Gitee Star](https://gitee.com/rmbgame/SteamTools/badge/star.svg)](https://gitee.com/rmbgame/SteamTools)
 [![QQ群](https://img.shields.io/badge/QQ群-960746023-blue.svg?style=flat-square&color=12b7f5)](https://jq.qq.com/?_wv=1027&k=3JKPt4xC)
@@ -139,7 +139,7 @@ OS                            | Version                 | Architectures         
 [Android-Arm32]: https://developer.android.google.cn/ndk/guides/abis?hl=zh_cn#v7a
 [Android-Arm64]: https://developer.android.google.cn/ndk/guides/abis?hl=zh_cn#arm64-v8a
 
-### ~~iOS / iPadOS~~
+### iOS / iPadOS
 
 OS                            | Version                 | Architectures     |
 ------------------------------|-------------------------|-------------------|
