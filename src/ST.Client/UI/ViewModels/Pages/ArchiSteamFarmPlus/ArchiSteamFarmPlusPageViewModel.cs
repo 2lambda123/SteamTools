@@ -69,7 +69,14 @@ namespace System.Application.UI.ViewModels
                 {
                     fileTypes = null;
                 }
-                await PickAsync(ASFService.Current.ImportGlobalFiles, fileTypes);
+                try
+                {
+                    await PickAsync(ASFService.Current.ImportGlobalFiles, fileTypes);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error occurred while picking global files: " + e.ToString());
+                }
             });
 
             MenuItems = new ObservableCollection<MenuItemViewModel>()
