@@ -156,7 +156,7 @@ namespace System.Application.UI.ViewModels
             IWindowManager.Instance.Show(CustomWindow.ASF_AddBot, resizeMode: ResizeMode.CanResize);
         }
 
-        public async void PauseOrResumeBotFarming(Bot bot)
+        public async Task PauseOrResumeBotFarming(Bot bot)
         {
             (bool success, string message) result;
 
@@ -292,7 +292,7 @@ namespace System.Application.UI.ViewModels
             Browser2.Open(url);
         }
 
-        public void OpenBrowser(string? tag)
+        public void OpenBrowser(string tag)
         {
             var tag_ = Enum.TryParse<ActionItem>(tag, out var @enum) ? @enum : default;
             OpenBrowserCore(tag_);
