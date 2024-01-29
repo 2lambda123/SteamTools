@@ -97,9 +97,9 @@
 		<PackageVersion Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.197" />
 
 		<!-- AppCenter.* -->
-		<PackageVersion Include="Microsoft.AppCenter" Version="4.5.0" />
+		<PackageVersion Include="Microsoft.AppCenter" Version="5.0.3" />
 		<PackageVersion Include="Microsoft.AppCenter.Analytics" Version="4.5.0" />
-		<PackageVersion Include="Microsoft.AppCenter.Crashes" Version="4.5.0" />
+		<PackageVersion Include="Microsoft.AppCenter.Crashes" Version="5.0.3" />
 		<PackageVersion Include="Aigio.Avalonia.AppCenter" Version="4.5.0" />
 		<PackageVersion Include="Aigio.Avalonia.AppCenter.Analytics" Version="4.5.0" />
 		<PackageVersion Include="Aigio.Avalonia.AppCenter.Crashes" Version="4.5.0" />
@@ -194,7 +194,7 @@
 
 		<!-- ORM -->
 		<PackageVersion Include="sqlite-net-pcl" Version="1.8.116" />
-		<PackageVersion Include="SQLitePCLRaw.bundle_green" Version="2.0.7" />
+		<PackageVersion Include="SQLitePCLRaw.bundle_green" Version="2.1.5" />
 
 		<!-- MonoMac(NETSTANDARD) -->
 		<PackageVersion Include="MonoMac.NetStandard" Version="0.0.4" />
@@ -205,7 +205,7 @@
 
 		<!-- Serialize -->
 		<PackageVersion Include="MessagePack" Version="2.3.85" />
-		<PackageVersion Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageVersion Include="Newtonsoft.Json" Version="13.0.2" />
 
 		<!-- Html Parser -->
 		<PackageVersion Include="HtmlAgilityPack" Version="1.11.42" />
