@@ -1,0 +1,897 @@
+repo_name: 2lambda123/SteamTools
+report_id: 985ec32bf7a5ed0ff642f714a5fe96e9
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T19:14:32+00:00'
+requested_by: 2lambda123
+provider: github
+branch: main
+detected_tools_count: 78
+tools:
+- name: ASP.NET
+  description: An open source web framework for building modern web apps and services
+    with .NET
+  website_url: https://www.asp.net/
+  version: 4.7.2
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6755/2c45151a4a11d3a3c8e71bb34dd069d6_400x400.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Avalonia.App.Bridge.Package.RefLauncher/Launcher/Launcher.csproj
+  detection_source: src/ST.Client.Desktop.Avalonia.App.Bridge.Package.RefLauncher/Launcher/Launcher.csproj
+- name: C#
+  description: Simple, general-purpose, object-oriented programming language for the
+    .NET platform
+  website_url: http://csharp.net
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: Kotlin
+  description: Statically typed Programming Language targeting JVM and JavaScript
+  website_url: https://kotlinlang.org/
+  open_source: true
+  hosted_saas: true
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/3750/pCfEzr6L.png
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: Smalltalk
+  description: An object-oriented, dynamically typed reflective programming language
+  website_url: http://en.wikipedia.org/wiki/Smalltalk
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2624/no-img-open-source.png
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: ".NET"
+  description: A free, cross-platform, open source developer platform for building
+    many different types of applications
+  website_url: http://www.microsoft.com/net/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/tests/Common.UnitTest/Common.UnitTest.csproj
+  detection_source: tests/Common.UnitTest/Common.UnitTest.csproj
+- name: ".NET Core"
+  description: An Open Source, General-Purpose Development Platform Maintained by
+    Microsoft and the .NET Community
+  website_url: https://docs.microsoft.com/en-us/dotnet/core/
+  version: '5.0'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/6403/default_91fc1f0ee315262794273aa1387eaf8fed8436e6.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTool.Proxy.Test/SteamTool.Proxy.Test.csproj
+  detection_source: source/SteamTool.Proxy.Test/SteamTool.Proxy.Test.csproj
+- name: ASP.NET Core
+  description: A cross-platform .NET framework for building modern cloud-based web
+    applications on Windows, Mac, or Linux
+  website_url: docs.microsoft.com/en-us/aspnet/core/
+  version: 2.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/11331/asp.net-core.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTool.Authenticator/SteamTool.Authenticator.csproj
+  detection_source: source/SteamTool.Proxy.Test/SteamTool.Proxy.Test.csproj
+- name: Android SDK
+  description: An SDK that provides you the API libraries and developer tools necessary
+    to build, test, and debug apps for Android.
+  website_url: http://developer.android.com
+  version: '31.0'
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1010/m8jf0po4imu8t5eemjdd.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Mobile.Droid.Design/app/build.gradle
+  detection_source: src/ST.Client.Mobile.Droid.Design/app/build.gradle
+- name: RxJava
+  description: Reactive Extensions for the JVM
+  website_url: https://github.com/ReactiveX/RxJava
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Java Tools
+  image_url: https://img.stackshare.io/service/2190/6407041.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
+  detection_source: src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
+- name: Entity Framework
+  description: An object-relational mapper that enables .NET developers to work with
+    relational data
+  website_url: https://docs.microsoft.com/en-us/aspnet/entity-framework
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Object Relational Mapper (ORM)
+  image_url: https://img.stackshare.io/service/3251/no-img-open-source.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: Entity Framework Core
+  description: Lightweight and cross-platform version of the popular Entity Framework
+  website_url: https://docs.microsoft.com/en-us/ef/core/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Object Relational Mapper (ORM)
+  image_url: https://img.stackshare.io/service/10254/no-img-open-source.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: Microsoft SQL Server
+  description: A relational database management system developed by Microsoft
+  website_url: http://microsoft.com/sqlserver
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1027/sql_server.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: Fody
+  description: Extensible tool for weaving .net assemblies
+  website_url: https://github.com/Fody/Fody
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/20932/default_0d33a14bfbacce3a8e941836ff542881b7e5223e.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/.github/workflows/dotnet.yml
+  detection_source: ".github/workflows/dotnet.yml"
+- name: Gradle
+  description: A powerful build system for the JVM
+  website_url: https://www.gradle.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Mobile.Droid.Design/app/build.gradle
+  detection_source: src/ST.Client.Mobile.Droid.Design/app/build.gradle
+- name: Moq
+  description: The most popular and friendly mocking framework for .NET
+  website_url: https://github.com/Moq/moq4
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/1628/1434934.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Avalonia.Demo.App/ST.Client.Desktop.Avalonia.Demo.App.csproj
+  detection_source: src/ST.Client.Desktop.Avalonia.Demo.App/ST.Client.Desktop.Avalonia.Demo.App.csproj
+- name: NUnit
+  description: An open-source unit testing framework
+  website_url: http://www.nunit.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2371/jZ6MYx5Y_400x400.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/tests/Common.UnitTest/Common.UnitTest.csproj
+  detection_source: tests/Common.UnitTest/Common.UnitTest.csproj
+- name: NuGet
+  description: The package manager for .NET
+  website_url: https://www.nuget.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/tests/Common.UnitTest/Common.UnitTest.csproj
+  detection_source: tests/Common.UnitTest/Common.UnitTest.csproj
+- name: Visual Studio
+  description: State-of-the-art tools and services that you can use to create great
+    apps for devices, the cloud, and everything in between.
+  website_url: http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Integrated Development Environment
+  image_url: https://img.stackshare.io/service/1451/SR2hUhQN.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/Avalonia.Ref.sln
+  detection_source: Avalonia.Ref.sln
+- name: Android OS
+  description: An open source mobile operating system by Google
+  website_url: https://www.android.com
+  version: '12.0'
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Operating Systems
+  image_url: https://img.stackshare.io/service/9586/ZvmtaSXW_400x400.jpg
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Mobile.Droid.Design/app/build.gradle
+  detection_source: src/ST.Client.Mobile.Droid.Design/app/build.gradle
+- name: NLog
+  description: Flexible &amp; free open-source logging for .NET
+  website_url: https://nlog-project.org/
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/9672/nlog_logo_square_normal.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: NPOI
+  description: ".NET library that can read/write Office formats"
+  website_url: https://github.com/tonyqus/npoi
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Data Transfer
+  image_url: https://img.stackshare.io/service/20931/default_0262ac7407d646f59c98f476ca931d21acc32956.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Tools.AreaImport/ST.Tools.AreaImport.csproj
+  detection_source: src/ST.Tools.AreaImport/ST.Tools.AreaImport.csproj
+- name: PowerShell
+  description: A task automation and configuration management framework
+  website_url: https://docs.microsoft.com/en-us/powershell/
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/3681/powershell-logo.png
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/2lambda123/SteamTools
+  detection_source: Repo Metadata
+- name: Avalonia
+  description: Avalonia is a WPF/UWP-inspired cross-platform XAML-based UI framework
+    providing a flexible styling system and supporting a wide range of Operating Systems
+    such as Windows
+  package_url: https://www.nuget.org/Avalonia
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13493/default_a5f7e489f1a0992baa6377c8f765ce325404bce2.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Avalonia/ST.Client.Avalonia.csproj
+  detection_source: src/ST.Client.Desktop.Avalonia/ST.Client.Avalonia.csproj
+- name: Avalonia.Desktop
+  description: Avalonia is a WPF/UWP-inspired cross-platform XAML-based UI framework
+    providing a flexible styling system and supporting a wide range of Operating Systems
+    such as Windows
+  package_url: https://www.nuget.org/Avalonia.Desktop
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14720/default_7f6d2c2d8bc459a222d9040213ab156a58e86e29.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Avalonia/ST.Client.Avalonia.csproj
+  detection_source: src/ST.Client.Desktop.Avalonia/ST.Client.Avalonia.csproj
+- name: Costura.Fody
+  description: Fody add-in for embedding references as resources
+  package_url: https://www.nuget.org/Costura.Fody
+  version: 5.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13752/default_1ec7b75e4d233f940c213992649575a79a936406.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: DnsClient
+  description: DnsClient.NET is a simple yet very powerful and high performant open
+    source library for the .NET Framework to do DNS lookups
+  package_url: https://www.nuget.org/DnsClient
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/15401/default_2d3a54fb471e8215ac08e1a9313c21a7a69a9e8b.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Linux/ST.Client.Linux.csproj
+  detection_source: src/ST.Client.Desktop.Linux/ST.Client.Linux.csproj
+- name: Fleck
+  description: C# WebSocket Implementation
+  package_url: https://www.nuget.org/Fleck
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14421/default_c5260d154b1317cf078ddf2c708877d9a518a6b1.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client/ST.Client.csproj
+  detection_source: src/ST.Client/ST.Client.csproj
+- name: MSTest.TestFramework
+  description: This is MSTest V2, the evolution of Microsoft's Test Framework
+  package_url: https://www.nuget.org/MSTest.TestFramework
+  version: 2.1.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13142/default_a057bdad489be3cb053d372a68695da4ac94962d.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTool.Proxy.Test/SteamTool.Proxy.Test.csproj
+  detection_source: source/SteamTool.Proxy.Test/SteamTool.Proxy.Test.csproj
+- name: MessagePack
+  description: Extremely Fast MessagePack
+  package_url: https://www.nuget.org/MessagePack
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13089/default_baa6c1c3e725b18a803052f0d13efd0ca49e5d50.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.CoreLib/Common.CoreLib.csproj
+  detection_source: src/Common.CoreLib/Common.CoreLib.csproj
+- name: Microsoft.AppCenter
+  description: This package contains the basic functionalities that all App Center
+    services use to communicate with the backend
+  package_url: https://www.nuget.org/Microsoft.AppCenter
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14535/default_d2ca6ac9aa45bf10343fd90d9f81f37f37308f7f.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Microsoft.AppCenter.Analytics
+  description: This package contains functionalities to collect session
+  package_url: https://www.nuget.org/Microsoft.AppCenter.Analytics
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13882/default_5b0d89659f8ef29e072f4f056edfe6596b2feb77.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Microsoft.AppCenter.Crashes
+  description: This package contains functionalities to collect crash reports for
+    your application
+  package_url: https://www.nuget.org/Microsoft.AppCenter.Crashes
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13943/default_a57ab4de31742e28d27f7c8bcac0de76978eb737.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Microsoft.AspNetCore.Identity.EntityFrameworkCore
+  description: ASP.NET Core Identity provider that uses Entity Framework Core
+  package_url: https://www.nuget.org/Microsoft.AspNetCore.Identity.EntityFrameworkCore
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13053/default_ed36ff3c005af695725e05bb15ea5b1f03de31f3.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: Microsoft.EntityFrameworkCore
+  description: Entity Framework Core is a lightweight and extensible version of the
+    popular Entity Framework data access technology
+  package_url: https://www.nuget.org/Microsoft.EntityFrameworkCore
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12852/default_ccf90b566c21ad9eaa59733f297e535ea39fb3b4.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: Microsoft.EntityFrameworkCore.Relational
+  description: Shared Entity Framework Core components for relational database providers
+  package_url: https://www.nuget.org/Microsoft.EntityFrameworkCore.Relational
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12914/default_cd4457378b2b3dee674f43707df49edfbc5c04e5.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: Microsoft.EntityFrameworkCore.SqlServer
+  description: Microsoft SQL Server database provider for Entity Framework Core
+  package_url: https://www.nuget.org/Microsoft.EntityFrameworkCore.SqlServer
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12891/default_4e8402857d2ce7356903ee7422d9b4a0f23cc137.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: Microsoft.Extensions.Configuration.Abstractions
+  description: Abstractions of key-value pair based configuration
+  package_url: https://www.nuget.org/Microsoft.Extensions.Configuration.Abstractions
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12885/default_d56a77cbb06d3dae6daef9669108e3e01d2494af.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop/ST.Client.Desktop.csproj
+  detection_source: src/ST.Client.Desktop/ST.Client.Desktop.csproj
+- name: Microsoft.Extensions.DependencyInjection
+  description: Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection
+  package_url: https://www.nuget.org/Microsoft.Extensions.DependencyInjection
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12846/default_0f5233770e71818507f2339042e7e61bef904e70.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.CoreLib/Common.CoreLib.csproj
+  detection_source: src/Common.CoreLib/Common.CoreLib.csproj
+- name: Microsoft.Extensions.Http
+  description: The HttpClient factory is a pattern for configuring and retrieving
+    named HttpClients in a composable way
+  package_url: https://www.nuget.org/Microsoft.Extensions.Http
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12940/default_54d470a1e19c265eb229b6bd88965fb8df9f9f78.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.CoreLib/Common.CoreLib.csproj
+  detection_source: src/Common.CoreLib/Common.CoreLib.csproj
+- name: Microsoft.Extensions.Logging
+  description: Logging infrastructure default implementation for Microsoft.Extensions.Logging
+  package_url: https://www.nuget.org/Microsoft.Extensions.Logging
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12854/default_ccf90b566c21ad9eaa59733f297e535ea39fb3b4.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.CoreLib/Common.CoreLib.csproj
+  detection_source: src/Common.CoreLib/Common.CoreLib.csproj
+- name: Microsoft.Win32.Registry
+  description: Provides support for accessing and modifying the Windows Registry
+  package_url: https://www.nuget.org/Microsoft.Win32.Registry
+  version: 5.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13050/default_a0b0eac5a401515996bd8fc359ffcfbc844cbe90.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: Microsoft.Xaml.Behaviors.Wpf
+  description: Easily add interactivity to your apps using XAML Behaviors for WPF
+  package_url: https://www.nuget.org/Microsoft.Xaml.Behaviors.Wpf
+  version: 1.1.31
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13927/default_7ea5c5f37ab58d37bb544de46c10fa9855b0ccd9.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: NLog
+  description: NLog is a logging platform for .NET with rich log routing and management
+    capabilities
+  package_url: https://www.nuget.org/NLog
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12859/default_a3ccb59f9bc7225d3e241611dc27d0f4cd9875eb.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: NLog.Extensions.Logging
+  description: NLog LoggerProvider for Microsoft.Extensions.Logging for logging in
+    .NET Standard libraries and .NET Core applications
+  package_url: https://www.nuget.org/NLog.Extensions.Logging
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13244/default_43ce02ab18bb400d4d6b410ac4dc3a50f87e634a.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop/ST.Client.Desktop.csproj
+  detection_source: src/ST.Client.Desktop/ST.Client.Desktop.csproj
+- name: NLog.Web.AspNetCore
+  description: NLog LoggerProvider for Microsoft.Extensions.Logging and ASP.NET Core
+    platform
+  package_url: https://www.nuget.org/NLog.Web.AspNetCore
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13283/default_1e1f93823dcbf467a805adfd578c74f8f54c6a4e.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.ServerLib/Common.ServerLib.csproj
+  detection_source: src/Common.ServerLib/Common.ServerLib.csproj
+- name: NUnit3TestAdapter
+  description: A package including the NUnit 3 TestAdapter for Visual Studio 2012
+    onwards
+  package_url: https://www.nuget.org/NUnit3TestAdapter
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13216/default_e23dabba1be2c69fbf5fc50bdc46cbffbe6ca2cb.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/tests/Common.UnitTest/Common.UnitTest.csproj
+  detection_source: tests/Common.UnitTest/Common.UnitTest.csproj
+- name: Newtonsoft.Json
+  description: Json.NET is a popular high-performance JSON framework for .NET
+  package_url: https://www.nuget.org/Newtonsoft.Json
+  version: 12.0.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/nuget/image.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+  vulnerabilities:
+  - name: 'Duplicate Advisory: Improper Handling of Exceptional Conditions in Newtonsoft.Json'
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-8rfx-6mr3-5jh3
+    detected_date: Jan 4
+    severity: high
+    first_patched: 13.0.1
+  - name: Improper Handling of Exceptional Conditions in Newtonsoft.Json
+    cve_id: CVE-2024-21907
+    cve_url: https://github.com/advisories/GHSA-5crp-9r3c-p9vr
+    detected_date: Jun 23
+    severity: high
+    first_patched: 13.0.1
+- name: Nito.Disposables
+  description: IDisposable and IAsyncDisposable helper types
+  package_url: https://www.nuget.org/Nito.Disposables
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14756/default_6229b8a98d0d6f12441ecd7cc20036868d7523a5.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop/ST.Client.Desktop.csproj
+  detection_source: src/ST.Client.Desktop/ST.Client.Desktop.csproj
+- name: Octokit
+  description: An async-based GitHub API client library for .NET and .NET Core
+  package_url: https://www.nuget.org/Octokit
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13595/default_2fed3dd41a57ad03758b88d7d49dbbc498986493.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Tools.OpenSourceLibraryList/ST.Tools.OpenSourceLibraryList.csproj
+  detection_source: src/ST.Tools.OpenSourceLibraryList/ST.Tools.OpenSourceLibraryList.csproj
+- name: Portable.BouncyCastle
+  description: BouncyCastle portable version with support for .NET 4
+  package_url: https://www.nuget.org/Portable.BouncyCastle
+  license: Other
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13024/default_fcb3006a7cddfe998d1b0701902cda4ed80b227e.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client/ST.Client.csproj
+  detection_source: src/ST.Client/ST.Client.csproj
+- name: ReactiveUI
+  description: A MVVM framework that integrates with the Reactive Extensions for .NET
+    to create elegant, testable User Interfaces that run on any mobile or desktop
+    platform
+  package_url: https://www.nuget.org/ReactiveUI
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13647/default_09f501a982727de1a2cc649d59f92953d5bc05a8.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Linux.App.TrayIcon/ST.Client.Desktop.Linux.App.TrayIcon.csproj
+  detection_source: src/ST.Client.Desktop.Linux.App.TrayIcon/ST.Client.Desktop.Linux.App.TrayIcon.csproj
+- name: SharpZipLib
+  description: SharpZipLib
+  package_url: https://www.nuget.org/SharpZipLib
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12991/default_c33fee4544dbdcb376300222dc5e214ee63f7ce9.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop/ST.Client.Desktop.csproj
+  detection_source: src/ST.Client.Desktop/ST.Client.Desktop.csproj
+- name: SkiaSharp
+  description: SkiaSharp is a cross-platform 2D graphics API for .NET platforms based
+    on Google's Skia Graphics Library
+  package_url: https://www.nuget.org/SkiaSharp
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13097/default_8ec8443385d582f19f93b79f0dcf69f422e58967.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Avalonia/ST.Client.Avalonia.csproj
+  detection_source: src/ST.Client.Desktop.Avalonia/ST.Client.Avalonia.csproj
+- name: Square.OkHttp3
+  description: An HTTP+HTTP/2 client for Android and Java applications
+  package_url: https://www.nuget.org/Square.OkHttp3
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13638/default_cf7c9bcc8caff1ab5c9fba9a4cc235b100a0a0b2.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Square.Picasso
+  description: A powerful image downloading and caching library for Android
+  package_url: https://www.nuget.org/Square.Picasso
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14434/default_26203d730613eafa87f8442ac8c7d2681fb68c1e.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: System.Diagnostics.Tracing
+  description: Provides class that enable you to create high performance tracing events
+    to be captured by event tracing for Windows
+  package_url: https://www.nuget.org/System.Diagnostics.Tracing
+  version: 4.3.0
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13072/default_a057bdad489be3cb053d372a68695da4ac94962d.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: System.IO.FileSystem
+  description: Provides types that allow reading and writing to files and types that
+    provide basic file and directory support
+  package_url: https://www.nuget.org/System.IO.FileSystem
+  version: 4.3.0
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12931/default_2aeaea161c566d1abfbaf3f2206fda12b1eea9cd.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: System.IO.FileSystem.Primitives
+  description: Provides common enumerations and exceptions for path-based I/O libraries
+  package_url: https://www.nuget.org/System.IO.FileSystem.Primitives
+  version: 4.3.0
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13111/default_623cfb3f5700f77ec1aadc91de41d13f3aa2ae3d.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: System.Net.Primitives
+  description: Provides common types for network-based libraries, including System.Net.IPAddress,
+    System.Net.IPEndPoint, and System.Net.CookieContainer
+  package_url: https://www.nuget.org/System.Net.Primitives
+  version: 4.3.1
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12985/default_dd10728859f7e363ef13345d855b2daba48cace4.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/source/SteamTools/SteamTools.csproj
+  detection_source: source/SteamTools/SteamTools.csproj
+- name: System.Runtime.WindowsRuntime
+  description: Provides extensions methods that improve interoperation between managed
+    code and the Windows Runtime
+  package_url: https://www.nuget.org/System.Runtime.WindowsRuntime
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13458/default_b5cc6dac756daf8a76f449b0db2d2933859829df.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Avalonia.App.Bridge.Package.RefLauncher/Launcher/Launcher.csproj
+  detection_source: src/ST.Client.Desktop.Avalonia.App.Bridge.Package.RefLauncher/Launcher/Launcher.csproj
+- name: System.Runtime.WindowsRuntime.UI.Xaml
+  description: Provides managed equivalents of Extensible Application Markup Language
+  package_url: https://www.nuget.org/System.Runtime.WindowsRuntime.UI.Xaml
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14929/default_435207d3b7346ffdcce9f6ac98f41a2aa3ecfc54.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Avalonia.App.Bridge.Package.RefLauncher/Launcher/Launcher.csproj
+  detection_source: src/ST.Client.Desktop.Avalonia.App.Bridge.Package.RefLauncher/Launcher/Launcher.csproj
+- name: System.Text.Encodings.Web
+  description: Provides types for encoding and escaping strings for use in JavaScript,
+    HyperText Markup Language
+  package_url: https://www.nuget.org/System.Text.Encodings.Web
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13209/default_42e87535b59c0cd77a89678c1c4ed24abc143f58.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.CoreLib/Common.CoreLib.csproj
+  detection_source: src/Common.CoreLib/Common.CoreLib.csproj
+- name: System.Text.Json
+  description: Provides high-performance and low-allocating types that serialize objects
+    to JavaScript Object Notation
+  package_url: https://www.nuget.org/System.Text.Json
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13031/default_ed36ff3c005af695725e05bb15ea5b1f03de31f3.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Common.CoreLib/Common.CoreLib.csproj
+  detection_source: src/Common.CoreLib/Common.CoreLib.csproj
+- name: TaskScheduler
+  description: Provides a single assembly wrapper for the 1.0 and 2.0 versions of
+    Task Scheduler found in all Microsoft operating systems post Windows 98
+  package_url: https://www.nuget.org/TaskScheduler
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/15570/default_5b0ff01d95ca00fde4c85ea8e35b7ddba38ccb2b.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Desktop.Windows/ST.Client.Windows.csproj
+  detection_source: src/ST.Client.Desktop.Windows/ST.Client.Windows.csproj
+- name: Xamarin.AndroidX.AppCompat
+  description: Xamarin.Android bindings for AndroidX - appcompat
+  package_url: https://www.nuget.org/Xamarin.AndroidX.AppCompat
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13443/default_b5cc6dac756daf8a76f449b0db2d2933859829df.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Xamarin.AndroidX.ConstraintLayout
+  description: Xamarin.Android bindings for AndroidX - constraintlayout
+  package_url: https://www.nuget.org/Xamarin.AndroidX.ConstraintLayout
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/15533/default_9e6c5b16645c805765637f65779b2a8071a09c95.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Xamarin.AndroidX.Fragment
+  description: Xamarin.Android bindings for AndroidX - fragment
+  package_url: https://www.nuget.org/Xamarin.AndroidX.Fragment
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14718/default_ed2dff93c8ef09716d4634464fe3965af887d3ba.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Xamarin.AndroidX.RecyclerView
+  description: Xamarin.Android bindings for AndroidX - recyclerview
+  package_url: https://www.nuget.org/Xamarin.AndroidX.RecyclerView
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14411/default_6201d4e597174b346fb0490accc0cfd403259bf9.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Xamarin.Google.Android.Material
+  description: Xamarin.Android bindings for AndroidX - material
+  package_url: https://www.nuget.org/Xamarin.Google.Android.Material
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/14410/default_c3ae99d1628fe988c02a26ac02c562eac5962c0d.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Android/ST.Client.Android.csproj
+  detection_source: src/ST.Client.Android/ST.Client.Android.csproj
+- name: Z.EntityFramework.Plus.EFCore
+  description: EF+ Full Version | C# Entity Framework Utilities
+  package_url: https://www.nuget.org/Z.EntityFramework.Plus.EFCore
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13566/default_acafa9133bcbebb2b966c9340c23194c2f9bf7bc.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/Repositories.EFCore/Repositories.EFCore.csproj
+  detection_source: src/Repositories.EFCore/Repositories.EFCore.csproj
+- name: io.reactivex:rxjava
+  description: Rxjava
+  version: 1.3.8
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
+  detection_source: src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
+- name: junit:junit
+  description: JUnit is a unit testing framework for Java
+  version: 4.13.2
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
+  detection_source: src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
+- name: org.jetbrains.kotlinx:kotlinx-coroutines-core
+  version: 1.4.2
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/2lambda123/SteamTools/blob/main/src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
+  detection_source: src/ST.Client.Mobile.Droid.Design/v2ray/build.gradle
